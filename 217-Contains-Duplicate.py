@@ -5,16 +5,21 @@ class Solution:
     Best Case - Time complexity of O(n) as we have to traverse through the array atleast once
 
     Soln 1 - 
-    Bruteforce solution is to compare every element in the array with every other element. Time complexity is O(n^2) and Space Complexity is O(1)
+    Bruteforce solution is to compare every element in the array with every other element. 
+    Time complexity is O(n^2) and Space Complexity is O(1)
     
     Soln 2 - 
-    Sort the array and then check with the adjacent element. Time complexity is O(nlogn) and Space Complexity is O(1)
+    Sort the array and then check with the adjacent element. 
+    Time complexity is O(nlogn) and Space Complexity is O(1)
     
     Soln 3 - 
-    Convert the list to set and check if their lengths match. Time complexity is O(n) and Space Complexity is O(n)
+    Convert the list to set and check if their lengths match. 
+    Time complexity is O(n) and Space Complexity is O(n)
     
     Soln 4 -
-    Create Hashset and check for duplicates while adding elements to it. Time complexity is O(n) and Space Complexity is O(n)
+    Create Hashset and check for duplicates while adding elements to it. 
+    Time complexity is O(n) and Space Complexity is O(n)
+    
     """
     def containsDuplicate_soln3(self, nums: List[int]) -> bool:
         """
