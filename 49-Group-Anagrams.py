@@ -3,7 +3,8 @@ class Solution:
     Given an array of strings strs, group the anagrams together. You can return the answer in any order.
     An Anagram is a word or phrase formed by rearranging the letters of a different word or phrase, typically using all the original letters exactly once.
     
-    Best Case - Time complexity is O(n*m). It will be O(n) since we have to traverse through all the elements of the string atleast once 
+    Best Case - 
+    Time complexity is O(n*m). It will be O(n) since we have to traverse through all the elements of the string atleast once 
     to determine its an anagram and O(m) again since we have to traverse through the array of strings to group them.
     
     Soln 1 -

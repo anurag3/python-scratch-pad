@@ -12,6 +12,8 @@ class Solution:
     Use the 2 pointer method. We can have a left pointer and right pointer. Right pointer will keep on incrementing till it finds the 
     unique value and when it finds a unique value, left pointer will place that unique value in its current position and 
     move to the next spot. We can have a counter for when the left pointer moves
+    
+    Time complexity is O(n) since we have to traverse through all the elements of the array atleast once and Space Complexity is O(1)
     """
     def removeDuplicates(self, nums: List[int]) -> int:
         counter = 1

@@ -4,7 +4,8 @@ class Solution:
     You may assume that each input would have exactly one solution, and you may not use the same element twice.
     You can return the answer in any order.
     
-    Best Case - Time complexity is O(n) since we have to traverse through all the elements of the array atleast once
+    Best Case - 
+    Time complexity is O(n) since we have to traverse through all the elements of the array atleast once
 
     Sol 1 -
     Pick element 1 and scan through every element after it and check if they add up to target. Keep repeating till last element.

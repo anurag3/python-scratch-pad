@@ -2,7 +2,8 @@ class Solution:
     """
     Question - Given an integer array nums, return true if any value appears at least twice in the array, and return false if every element is distinct.
     
-    Best Case - Time complexity of O(n) as we have to traverse through the array atleast once
+    Best Case - 
+    Time complexity of O(n) as we have to traverse through the array atleast once
 
     Soln 1 - 
     Bruteforce solution is to compare every element in the array with every other element. 
