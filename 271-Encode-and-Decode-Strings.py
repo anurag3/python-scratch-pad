@@ -3,7 +3,8 @@ class Codec:
     Design an algorithm to encode a list of strings to a string. 
     The encoded string is then sent over the network and is decoded back to the original list of strings.
     
-    Best Case - Time complexity is O(n) since we have to traverse through all the elements of the array atleast once
+    Best Case - 
+    Time complexity is O(n) since we have to traverse through all the elements of the array atleast once
 
     Sol -
     When encoding the string, we will be adding len of string followed by a delimiter and then the actual string
