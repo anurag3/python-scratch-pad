@@ -1,17 +1,18 @@
 class BrowserHistory_DoublyLinkedList:
     """
-    You have a browser of one tab where you start on the homepage and you can visit another url, 
+    You have a browser of one tab where you start on the homepage and you can visit another url,
     get back in the history number of steps or move forward in the history number of steps.
 
     Implement the BrowserHistory class:
 
     BrowserHistory(string homepage) Initializes the object with the homepage of the browser.
     void visit(string url) Visits url from the current page. It clears up all the forward history.
-    string back(int steps) Move steps back in history. If you can only return x steps in the history and 
+    string back(int steps) Move steps back in history. If you can only return x steps in the history and
         steps > x, you will return only x steps. Return the current url after moving back in history at most steps.
-    string forward(int steps) Move steps forward in history. If you can only forward x steps in the history and 
+    string forward(int steps) Move steps forward in history. If you can only forward x steps in the history and
     steps > x, you will forward only x steps. Return the current url after forwarding in history at most steps.
     """
+
     def __init__(self, homepage: str):
         self.curr = ListNode(homepage)
 
@@ -30,7 +31,7 @@ class BrowserHistory_DoublyLinkedList:
             self.curr = self.curr.next
             steps -= 1
         return self.curr.val
-            
+
 
 class ListNode:
     def __init__(self, val, prev=None, next=None):
@@ -38,7 +39,7 @@ class ListNode:
         self.prev = prev
         self.next = next
 
-        
+
 # Your BrowserHistory object will be instantiated and called as such:
 # obj = BrowserHistory(homepage)
 # obj.visit(url)
@@ -55,12 +56,11 @@ class BrowserHistory_Stack:
     def visit(self, url: str) -> None:
         if len(self.history) < self.current_position + 2:
             self.history.append(url)
-        else: 
+        else:
             self.history[self.current_position + 1] = url
         self.current_position += 1
         self.len = self.current_position + 1
 
-        
     def back(self, steps: int) -> str:
         # We are using max operation to ensure pointer >= 0
         # to avoid pointer from going out of lower bounds

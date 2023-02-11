@@ -3,14 +3,15 @@ class ListNode:
         self.val = val
         self.next = None
 
+
 # Implementation for Singly Linked List
 class LinkedList:
     def __init__(self):
-        # Init the list with a 'dummy' node which makes 
+        # Init the list with a 'dummy' node which makes
         # removing a node from the beginning of list easier.
         self.head = ListNode(-1)
         self.tail = self.head
-    
+
     def insertEnd(self, val):
         self.tail.next = ListNode(val)
         self.tail = self.tail.next
@@ -21,7 +22,7 @@ class LinkedList:
         while i < index and curr:
             i += 1
             curr = curr.next
-        
+
         # Remove the node ahead of curr
         if curr and curr.next:
             if curr.next == self.tail:

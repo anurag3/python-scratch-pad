@@ -9,10 +9,10 @@ class MinStack:
     int top() gets the top element of the stack.
     int getMin() retrieves the minimum element in the stack.
     You must implement a solution with O(1) time complexity for each function.
-    
+
     Soln 1 -
-    Create a duplicate stack which only tracks the minimum value 
-    
+    Create a duplicate stack which only tracks the minimum value
+
     """
 
     def __init__(self):
@@ -33,7 +33,6 @@ class MinStack:
 
     def getMin(self) -> int:
         return self.minStack[-1]
-        
 
 
 # Your MinStack object will be instantiated and called as such:
