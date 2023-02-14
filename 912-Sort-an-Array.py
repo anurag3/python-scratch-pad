@@ -1,4 +1,4 @@
-class Solution:
+class MergeSolution:
     """
     Given an array of integers nums, sort the array in ascending order and return it.
 
@@ -55,3 +55,38 @@ class Solution:
             nums[k] = rightHalf[j]
             j += 1
             k += 1
+
+
+class QuickSolution:
+    # It will not work since the problem needs solution with worst case O(nlogn)
+    #  and quicksort is O(n^2)
+    def sortArray(self, nums: List[int]) -> List[int]:
+        startIndex = 0
+        endIndex = len(nums) - 1
+        nums = self.quickSort(nums, startIndex, endIndex)
+        return nums
+
+    def quickSort(self, inputArray, startIndex, endIndex):
+        # base case similar to mergeSort
+        if endIndex - startIndex + 1 <= 1:
+            return inputArray
+
+        pivotValue = inputArray[endIndex]
+        i = 0  # Index for comparison pointer
+        j = startIndex  # Index for swap pointer
+
+        for i in range(startIndex, endIndex):
+            if inputArray[i] < pivotValue:
+                inputArray[i], inputArray[j] = inputArray[j], inputArray[i]
+                j += 1
+
+        # swap the pivot element with the swap pointer
+        inputArray[endIndex], inputArray[j] = inputArray[j], inputArray[endIndex]
+
+        # Sort the left of pivot
+        self.quickSort(inputArray, startIndex, j - 1)
+
+        # Sort the right of pivot
+        self.quickSort(inputArray, j + 1, endIndex)
+
+        return inputArray
