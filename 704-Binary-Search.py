@@ -8,17 +8,20 @@ class Solution:
 
     def search(self, nums: List[int], target: int) -> int:
         leftIndex, rightIndex = 0, len(nums) - 1
-        middleIndex = 0
-        while leftIndex <= rightIndex:
-            middleIndex = abs(leftIndex - rightIndex) // 2
+        if target < nums[leftIndex]:
+            return -1
+        elif target > nums[rightIndex]:
+            return -1
+        else:
+            while leftIndex <= rightIndex:
+                middleIndex = abs(leftIndex + rightIndex) // 2
 
-            if target > nums[middleIndex]:
-                # search to the right of middleIndex
-                leftIndex = middleIndex + 1
-            elif target < nums[middleIndex]:
-                # search to the left of middleIndex
-                rightIndex = middleIndex - 1
-            else:
-                return middleIndex
-
-        return -1
+                if target > nums[middleIndex]:
+                    # search to the right of middleIndex
+                    leftIndex = middleIndex + 1
+                elif target < nums[middleIndex]:
+                    # search to the left of middleIndex
+                    rightIndex = middleIndex - 1
+                else:
+                    return middleIndex
+            return -1
