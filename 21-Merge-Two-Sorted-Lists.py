@@ -10,12 +10,11 @@ class Solution:
     Return the head of the merged linked list.
     """
 
-    def mergeTwoLists(
-        self, list1: Optional[ListNode], list2: Optional[ListNode]
-    ) -> Optional[ListNode]:
+    # fmt: off
+    def mergeTwoLists(self, list1: Optional[ListNode], list2: Optional[ListNode]) -> Optional[ListNode]:
         dummyNode = ListNode()
         tail = dummyNode
-
+    # fmt: on
         while list1 and list2:
             if list1.val < list2.val:
                 tail.next = list1

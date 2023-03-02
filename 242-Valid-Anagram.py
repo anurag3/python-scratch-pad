@@ -24,9 +24,9 @@ class Solution:
 
     """
 
-    def isAnagram_soln1(self, s: str, t: str) -> bool:
-        # Not the right solution
-        return list(s) == list(t)
+    # def isAnagram_soln1(self, s: str, t: str) -> bool:
+    #     # Not the right solution
+    #     return list(s) == list(t)
 
     def isAnagram_soln2(self, s: str, t: str) -> bool:
         import collections
@@ -55,3 +55,7 @@ class Solution:
 
     def isAnagram_soln4(self, s: str, t: str) -> bool:
         return sorted(s) == sorted(t)
+
+
+sol = Solution()
+print(sol.isAnagram_soln2("madam", "daamm"))
